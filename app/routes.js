@@ -7,7 +7,7 @@
    // authentication routes
    // sample api route
    app.get('/api/nerds', function(req, res) {
-       console.log('test');
+       console.log('Someones calling the nerds');
        // use mongoose to get all nerds in the database
        Nerd.find(function(err, nerds) {
          // if there is an error retrieving, send the error. 
@@ -19,10 +19,11 @@
      .post('/api/nerds', function(req, res) {
        var nerd = new Nerd(); // create a new instance of the nerd model
        nerd.name = req.body.name; // set the nerds name (comes from the request)
+       nerd.superpower = req.body.superpower; 
        // save the nerd and check for errors
        nerd.save(function(err) {
          if (err) res.send(err);
-         console.log("success");
+         console.log("Nerd created!");
          res.json({ message: 'Nerd created!' });
        });
      })
@@ -33,4 +34,4 @@
      .get('*', function(req, res) {
        res.sendfile('./public/views/index.html'); // load our public/index.html file
      });
- };
+};
