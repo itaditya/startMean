@@ -1,0 +1,27 @@
+<!-- public/views/index.html -->
+<!doctype html>
+<html lang="en" ng-app="startMean">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Starter MEAN Single Page Application</title>
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/vendor/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/vendor/angular-route/angular-route.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="pageheader">Hello MEAN</h2>
+        </div>
+        <a href="/#/nerd" class="btn btn-warning">Load Nerd</a>
+        <div ng-view></div>
+    </div>
+    <script type="text/javascript" src="/views/module.js"></script>
+    <script type="text/javascript" src="/views/nerdDash/module.js"></script>
+    <script type="text/javascript" src="/views/nerdDash/nerdCtrl.js"></script>
+    <script type="text/javascript" src="/views/nerdDash/nerdService.js"></script>
+</body>
+</html>

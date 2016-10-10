@@ -1,0 +1,8 @@
+<input type="text" name="query" ng-model="query">
+<button class="btn btn-success" ng-click="setNerd()">Save</button>
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="user in users">{{$index + 1}}. <strong>{{user.name}}</strong></li>
+</ul>
+<script>
+  // var app = angular.module('nerd',[]);
+</script>
